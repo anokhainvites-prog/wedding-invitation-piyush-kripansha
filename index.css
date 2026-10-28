@@ -1653,3 +1653,61 @@ a {
 .countdown-scratch {
   isolation: isolate;
 }
+
+
+/* Floating Wedding Music Button - Fixed */
+.music-toggle {
+  position: fixed;
+  right: 12px;
+  bottom: 22px;
+  top: auto;
+  transform: none;
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 10px 13px;
+  border: 1px solid #c8a76b;
+  border-radius: 30px;
+
+  background: rgba(65, 15, 31, 0.96);
+  color: #f1d69b;
+
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.music-toggle #musicIcon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.music-toggle:hover {
+  background: #722c40;
+}
+
+@media (max-width: 600px) {
+  .music-toggle {
+    right: 10px;
+    bottom: 16px;
+    padding: 9px 11px;
+    font-size: 8px;
+    gap: 6px;
+  }
+
+  .music-toggle #musicIcon {
+    font-size: 14px;
+  }
+}
+
+  }
+}

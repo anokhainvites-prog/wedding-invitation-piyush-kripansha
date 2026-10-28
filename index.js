@@ -23,7 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (invitationOpened) return;
 
     invitationOpened = true;
+// Play wedding music when invitation opens
+const weddingMusic = document.getElementById("weddingMusic");
 
+if (weddingMusic) {
+  weddingMusic.play()
+    .then(() => {
+    const musicButton = document.getElementById("musicToggle");
+if (musicButton) {
+  musicButton.style.display = "none";
+}
+    })
+    .catch((error) => {
+      console.log("Music could not start:", error);
+    });
+}
     // Reveal the full invitation
     mainContent.classList.add("is-visible");
 
@@ -755,5 +769,35 @@ document.addEventListener("DOMContentLoaded", () => {
       cancelAnimationFrame(frameId);
       animate();
     }
+  });
+})();
+
+/* WEDDING MUSIC PLAY / PAUSE */
+(() => {
+  const music = document.getElementById("weddingMusic");
+  const button = document.getElementById("musicToggle");
+  const label = document.getElementById("musicLabel");
+  const icon = document.getElementById("musicIcon");
+
+  if (!music || !button || !label || !icon) return;
+
+  button.addEventListener("click", async () => {
+    if (music.paused) {
+      try {
+        await music.play();
+        label.textContent = "PAUSE MUSIC";
+        icon.textContent = "♫";
+      } catch (error) {
+        label.textContent = "TAP TO RETRY";
+      }
+    } else {
+      music.pause();
+      label.textContent = "PLAY MUSIC";
+      icon.textContent = "♫";
+    }
+  });
+
+  music.addEventListener("ended", () => {
+    label.textContent = "PLAY MUSIC";
   });
 })();
