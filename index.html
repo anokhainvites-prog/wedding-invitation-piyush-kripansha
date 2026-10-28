@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Piyush & Kripansha | Wedding Invitation</title>
+
+  <meta
+    name="description"
+    content="Join Piyush and Kripansha as they begin their forever."
+  />
+
+  <!-- Elegant typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- Opening screen -->
+  <section class="opening" id="opening">
+
+    <div class="opening-ornament"></div>
+
+    <p class="eyebrow opening-eyebrow">A CELEBRATION OF LOVE</p>
+
+    <div class="hero-names">
+      <span class="name name-first">Piyush</span>
+      <span class="ampersand">&</span>
+      <span class="name name-second">Kripansha</span>
+    </div>
+
+    <div class="gold-line"></div>
+
+    <p class="hero-date">04 · 12 · 2026</p>
+    <p class="hero-location">Sawai Madhopur, Rajasthan</p>
+
+    <button class="enter-button" id="enterButton">
+      <span>OPEN INVITATION</span>
+      <span class="button-arrow">↓</span>
+    </button>
+
+    <div class="opening-bottom">
+      <span></span>
+    </div>
+
+  </section>
+
+
+  <!-- Main invitation website -->
+  <main id="mainContent" class="main-content">
+
+    <!-- Welcome and family introduction -->
+    <section class="welcome section-padding reveal" id="welcome">
+
+      <p class="eyebrow">WITH THE BLESSINGS OF OUR FAMILIES</p>
+
+      <h1 class="section-title">
+        Two hearts,<br>
+        <span>one beautiful beginning.</span>
+      </h1>
+
+      <p class="welcome-copy">
+        With immense joy and the love of our families,
+        we invite you to join us as we begin our journey
+        of togetherness and celebrate a love that will
+        last a lifetime.
+      </p>
+
+      <div class="family-grid">
+
+        <article class="family-card">
+          <span class="family-label">THE GROOM</span>
+          <h2>Piyush Jain</h2>
+          <div class="small-gold-line"></div>
+          <p>Son of</p>
+          <h3>Mr. Mahendra Jain</h3>
+          <h3>Mrs. Kamlesh Jain</h3>
+        </article>
+
+        <article class="family-card">
+          <span class="family-label">THE BRIDE</span>
+          <h2>Kripansha Jain</h2>
+          <div class="small-gold-line"></div>
+          <p>Daughter of</p>
+          <h3>Mr. Trilok Jain</h3>
+          <h3>Mrs. Manorama Jain</h3>
+        </article>
+
+      </div>
+
+      <p class="placeholder-note">
+        Family names are temporary. Replace them with the actual names.
+      </p>
+
+    </section>
+
+
+    <!-- Couple story / photograph -->
+    <section class="story section-padding reveal" id="story">
+
+      <div class="story-image image-frame">
+        
+<img
+  src="./image1.png"
+  alt="Piyush and Kripansha"
+  loading="eager"
+  onerror="this.alt='Image load nahi hui'; console.error('Image not found:', this.src);"
+/>
+
+      </div>
+
+      <div class="story-content">
+        <p class="eyebrow">OUR FOREVER BEGINS</p>
+
+        <h2 class="section-title">
+          A little story<br>
+          <span>of us.</span>
+        </h2>
+
+        <p>
+          Some moments become memories. Some people become
+          home. And some journeys are simply more beautiful
+          when travelled together.
+        </p>
+
+        <p>
+          As two families come together and two hearts
+          promise forever, we would love to have you beside
+          us for the beginning of our new chapter.
+        </p>
+
+        <span class="signature">Piyush & Kripansha</span>
+      </div>
+
+    </section>
+
+
+    <!-- Countdown -->
+    <section class="countdown-section reveal" id="countdown">
+
+      <p class="eyebrow">THE COUNTDOWN TO FOREVER</p>
+
+      <h2 class="section-title">
+        The big day is <span>approaching.</span>
+      </h2>
+
+      <div class="countdown-scratch" id="countdownScratch">
+  <div class="countdown-grid">
+
+        <div class="countdown-item">
+          <span id="days">00</span>
+          <small>DAYS</small>
+        </div>
+
+        <div class="countdown-item">
+          <span id="hours">00</span>
+          <small>HOURS</small>
+        </div>
+
+        <div class="countdown-item">
+          <span id="minutes">00</span>
+          <small>MINUTES</small>
+        </div>
+
+        <div class="countdown-item">
+          <span id="seconds">00</span>
+          <small>SECONDS</small>
+        </div>
+
+      </div>
+
+    <canvas id="countdownScratchCanvas"></canvas>
+  </div>
+
+  <p class="countdown-scratch-hint">
+    ✧ SCRATCH TO REVEAL THE COUNTDOWN ✧
+  </p>
+
+      <p class="countdown-date">04 December 2026 · 9:00 PM</p>
+
+
+
+    </section>
+
+
+    <!-- Couple gallery -->
+    <section class="gallery-section section-padding reveal" id="gallery">
+
+      <div class="section-heading">
+        <p class="eyebrow">A FEW MOMENTS, A LIFETIME OF MEMORIES</p>
+
+        <h2 class="section-title">
+          Our little <span>world.</span>
+        </h2>
+
+        <p class="section-description">
+          Every photograph tells a story. Here are a few
+          moments from our journey together.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <figure class="gallery-item gallery-large">
+          <img
+            src="./image2.jpeg"
+            alt="Wedding couple portrait"
+            loading="lazy"
+          >
+          <figcaption>A moment to remember</figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-tall">
+          <img
+            src="./image3.jpeg"
+            alt="Romantic wedding moment"
+            loading="lazy"
+          >
+          <figcaption>Just the two of us</figcaption>
+        </figure>
+
+          >
+          <figcaption>Our kind of forever</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="./image1.png"
+            alt="Wedding celebration details"
+            loading="lazy"
+          >
+          <figcaption>Beautiful beginnings</figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-wide">
+          <img
+            src="./image4.png"
+            alt="Elegant wedding celebration"
+            loading="lazy"
+          >
+          <figcaption>A day filled with love</figcaption>
+        </figure>
+
+      </div>
+
+    
+
+    </section>
+
+
+    <!-- Wedding functions -->
+    <section class="functions-section section-padding reveal" id="functions">
+
+      <div class="section-heading">
+        <p class="eyebrow">THE WEDDING CELEBRATIONS</p>
+
+        <h2 class="section-title">
+          Days filled with <span>love & laughter.</span>
+        </h2>
+
+        <p class="section-description">
+          From joyful beginnings to the wedding vows,
+          join us for every special moment.
+        </p>
+      </div>
+
+      <div class="functions-grid">
+
+        <!-- Function 1 -->
+        <article class="function-card function-maroon">
+          <div class="function-decoration">01</div>
+
+          <p class="function-kicker">LET THE CELEBRATIONS BEGIN</p>
+
+          <h3>Mandap & Mayra</h3>
+
+          <div class="function-divider"></div>
+
+          <p class="function-description">
+           begin the celebrations.
+          </p>
+
+          <div class="function-details">
+            <p><span>DATE</span> 04 December 2026</p>
+            <p><span>TIME</span> 9:00 Am</p>
+            <p><span>VENUE</span> Ranthambore Grand Mahal, Sawai Madhopur</p>
+          </div>
+        </article>
+
+
+        <!-- Function 2 -->
+        <article class="function-card function-ivory">
+          <div class="function-decoration">02</div>
+
+          <p class="function-kicker">Ring Exchange</p>
+
+          <h3>Ring Ceremony</h3>
+
+          <div class="function-divider"></div>
+
+          <p class="function-description">
+            A celebration of love and commitment as we
+            exchange rings and promises for a lifetime.
+          </p>
+
+          <div class="function-details">
+            <p><span>DATE</span> 04 December 2026</p>
+            <p><span>TIME</span> 1:00 pm</p>
+            <p><span>VENUE</span> Ranthambore Grand Mahal, Sawai Madhopur</p>
+          </div>
+        </article>
+
+
+        <!-- Function 3 -->
+        <article class="function-card function-blush">
+          <div class="function-decoration">03</div>
+
+          <p class="function-kicker">Haldi Hues</p>
+
+          <h3>Haldi Ceremony</h3>
+
+          <div class="function-divider"></div>
+
+          <p class="function-description">
+          love and laughter as we celebrate the Haldi ceremony, a vibrant pre-wedding ritual filled with joy and blessings.
+          </p>
+
+          <div class="function-details">
+            <p><span>DATE</span> 04 December 2026</p>
+            <p><span>TIME</span> 2:00 PM</p>
+            <p><span>VENUE</span> Ranthambore Grand Mahal, Sawai Madhopur</p>
+          </div>
+        </article>
+
+
+        <!-- Function 4 -->
+        <article class="function-card function-gold">
+          <div class="function-decoration">04</div>
+
+          <p class="function-kicker">A NEW CHAPTER BEGINS</p>
+
+          <h3>Wedding & Reception</h3>
+
+          <div class="function-divider"></div>
+
+          <p class="function-description">
+           Join us as we exchange vows and
+            begin our forever together.
+          </p>
+
+          <div class="function-details">
+            <p><span>DATE</span> 04 December 2026</p>
+            <p><span>TIME</span> 9:00 PM</p>
+            <p><span>VENUE</span> Ranthambore Grand Mahal, Sawai Madhopur</p>
+          </div>
+        </article>
+
+      </div>
+
+      
+
+    </section>
+
+
+    <!-- Venue -->
+    <section class="venue-section reveal" id="venue">
+
+      <div class="venue-content">
+
+        <p class="eyebrow">WE CAN'T WAIT TO CELEBRATE WITH YOU</p>
+
+        <h2 class="section-title">
+          Meet us <span>there.</span>
+        </h2>
+
+        <h3>Ranthambore Grand Mahal</h3>
+
+        <p>Sawai Madhopur, Rajasthan</p>
+
+        <p class="venue-date">
+          Friday, 04 December 2026<br>
+          9:00 PM onwards
+        </p>
+
+        <a
+          class="map-button"
+          href="https://www.google.com/maps/search/?api=1&query=Ranthambore+Grand+Mahal+Sawai+Madhopur"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          VIEW LOCATION ↗
+        </a>
+
+      </div>
+
+      <div class="map-container">
+        <iframe
+          title="Find Ranthambore Grand Mahal"
+          src="https://maps.google.com/maps?q=Ranthambore%20Grand%20Mahal%20Sawai%20Madhopur&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+    </section>
+
+
+    <!-- Closing invitation -->
+    <footer class="closing-section">
+
+      <div class="closing-ornament"></div>
+
+      <p class="eyebrow">YOUR PRESENCE IS OUR PRESENT</p>
+
+      <h2>
+        Piyush <span>&</span> Kripansha
+      </h2>
+
+      <p class="closing-message">
+        With love in our hearts and blessings all around,
+        we look forward to celebrating with you.
+      </p>
+
+      <div class="gold-line"></div>
+
+      <p class="closing-date">04 · 12 · 2026</p>
+
+      <button class="back-to-top" id="backToTop">
+        BACK TO TOP ↑
+      </button>
+
+      <p class="footer-credit">MADE WITH LOVE</p>
+
+    </footer>
+
+  </main>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
