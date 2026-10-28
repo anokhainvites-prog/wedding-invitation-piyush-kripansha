@@ -801,3 +801,75 @@ document.addEventListener("DOMContentLoaded", () => {
     label.textContent = "PLAY MUSIC";
   });
 })();
+
+/* Wedding Gallery: Click to Enlarge */
+ 
+/* Wedding Gallery: Click to Enlarge */
+(() => {
+  const viewer = document.getElementById("photoViewer");
+  const expanded = document.getElementById("expandedPhoto");
+  const closeBtn = document.getElementById("closePhotoViewer");
+  const prevBtn = document.getElementById("prevPhoto");
+  const nextBtn = document.getElementById("nextPhoto");
+  const counter = document.getElementById("photoCounter");
+
+  if (!viewer || !expanded || !closeBtn || !prevBtn || !nextBtn) return;
+
+  let photos = [];
+  let currentIndex = 0;
+
+  function collectPhotos() {
+    photos = [...document.querySelectorAll(
+      ".gallery img, .gallery-item img, .gallery-card img"
+    )].filter(img => img.src && img.offsetWidth > 0);
+  }
+
+  function showPhoto(index) {
+    if (!photos.length) return;
+
+    currentIndex = (index + photos.length) % photos.length;
+    expanded.src = photos[currentIndex].src;
+    expanded.alt = photos[currentIndex].alt || "Wedding gallery photo";
+
+    if (counter) {
+      counter.textContent = `${currentIndex + 1} / ${photos.length}`;
+    }
+  }
+
+  document.addEventListener("click", event => {
+    const img = event.target.closest(
+      ".gallery img, .gallery-item img, .gallery-card img"
+    );
+
+    if (!img) return;
+
+    collectPhotos();
+    currentIndex = photos.indexOf(img);
+    if (currentIndex < 0) return;
+
+    showPhoto(currentIndex);
+    viewer.classList.add("is-active");
+    document.body.style.overflow = "hidden";
+  });
+
+  function closeViewer() {
+    viewer.classList.remove("is-active");
+    document.body.style.overflow = "";
+  }
+
+  closeBtn.addEventListener("click", closeViewer);
+  prevBtn.addEventListener("click", () => showPhoto(currentIndex - 1));
+  nextBtn.addEventListener("click", () => showPhoto(currentIndex + 1));
+
+  viewer.addEventListener("click", event => {
+    if (event.target === viewer) closeViewer();
+  });
+
+  document.addEventListener("keydown", event => {
+    if (!viewer.classList.contains("is-active")) return;
+
+    if (event.key === "Escape") closeViewer();
+    if (event.key === "ArrowLeft") showPhoto(currentIndex - 1);
+    if (event.key === "ArrowRight") showPhoto(currentIndex + 1);
+  });
+})();

@@ -1711,3 +1711,103 @@ a {
 
   }
 }
+
+/* Fullscreen Wedding Photo Viewer */
+.photo-viewer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  background: rgba(25, 5, 12, 0.96);
+  align-items: center;
+  justify-content: center;
+  padding: 55px 50px;
+}
+
+.photo-viewer.is-active {
+  display: flex;
+}
+
+.photo-viewer img {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #c8a76b;
+  box-shadow: 0 0 30px rgba(200, 167, 107, 0.15);
+}
+
+.photo-viewer button {
+  position: absolute;
+  color: #f1d69b;
+  background: rgba(65, 15, 31, 0.85);
+  border: 1px solid #c8a76b;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.photo-viewer-close {
+  top: 18px;
+  right: 20px;
+  font-size: 32px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.photo-viewer-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 48px;
+  border-radius: 24px;
+  font-size: 20px;
+}
+
+.photo-viewer-prev { left: 12px; }
+.photo-viewer-next { right: 12px; }
+
+.photo-viewer-counter {
+  position: absolute;
+  bottom: 12px;
+  color: #f1d69b;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .photo-viewer {
+    padding: 55px 38px;
+  }
+
+  .photo-viewer img {
+    max-width: 100%;
+    max-height: 78vh;
+  }
+
+  .photo-viewer-prev { left: 5px; }
+  .photo-viewer-next { right: 5px; }
+}
+
+/* Wedding gallery photo framing fix */
+.gallery img,
+.gallery-item img,
+.gallery-card img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.gallery-item,
+.gallery-card {
+  background: #fffaf2;
+}
+
+@media (max-width: 600px) {
+  .gallery img,
+  .gallery-item img,
+  .gallery-card img {
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
